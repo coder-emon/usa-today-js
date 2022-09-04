@@ -57,6 +57,25 @@
     </header>
     <main>
         <section>
+            <div class="container py-4">
+                <div class="row filter_btn">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center gap-3 filter_left_content mb-3 filter-left">
+                        <h5>Sort By View:</h5>
+                        <select name="cars" id="cars" class="bg-white border border-0 text-secondary px-3 py-2 rounded">
+                            <option value="Default">Default</option>
+                            <option value="Name">Name</option>
+                            <option value="Date">Date</option>
+                            <option value="View">View</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center gap-3 filter__right_btn filter-right">
+                        <button class="btn btn-primary">Today’s Pick</button>
+                        <button class="btn btn-outline-primary">Today’s Pick</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
             <div class="container">
                 <div class="row">
                     <h4 id="post_count"></h4>
