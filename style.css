@@ -6,7 +6,7 @@ body {
 }
 
 .top_left_menu span {
-    padding: 8px 15px;
+    padding: 8px 10px;
     display: inline-block;
     border-radius: 5px;
     font-size: 20px;
@@ -39,7 +39,7 @@ body {
 }
 .single_post{
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 30px;
 }
 .post_count_css{
