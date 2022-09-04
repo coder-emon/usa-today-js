@@ -17,6 +17,7 @@ const displayNavBarData = (data) => {
 
 }
 const loadPosts = async(id, category) => {
+    spiner(true)
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     const res = await fetch(url)
     const data = await res.json()
@@ -32,6 +33,7 @@ const displayPosts = (data, category) => {
     const message = ` items found for category ${category}`
     postCount.innerHTML = `${data.length ? data.length.toString().concat(message) : "No Post Found"}`
     // console.log(postap)
+    data.sort((a, b) => b.total_view - a.total_view);
     data.forEach((item) => {
         console.log(item)
         const postContent = document.createElement('div');
@@ -75,7 +77,16 @@ const displayPosts = (data, category) => {
                 </div>
     `
     menuUl.appendChild(postContent);
-    })
+})
+spiner(false);
+}
+const spiner = (isLoading) =>{
+    const preLoader = document.getElementById('loader')
+    if(isLoading){
+        preLoader.classList.remove('d-none')
+    }else(
+        preLoader.classList.add('d-none')
+    )
 }
 loadPosts('08', 'All Results')
 loadNavBarData()
